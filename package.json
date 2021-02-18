@@ -1,0 +1,21 @@
+{
+  "name": "three-starter",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "development": "microbundle -i src/index.js --output public/index.js --no-pkg-main --format iife --external none",
+    "production": "rm -rf public/*.map && microbundle -i src/index.js --output public/index.js --no-pkg-main --format iife --no-sourcemap --external none",
+    "dev": "npm run development -- --watch & npm run serve",
+    "prod": "npm run production",
+    "serve": "npx serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "microbundle": "^0.13.0"
+  },
+  "dependencies": {
+    "three": "^0.125.2"
+  }
+}
